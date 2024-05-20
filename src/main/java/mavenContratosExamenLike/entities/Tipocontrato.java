@@ -26,9 +26,22 @@ public class Tipocontrato extends Entidad implements Serializable {
 	@OneToMany(mappedBy="tipocontrato")
 	private List<Contrato> contratos;
 
+	
+	// CONSTRUCTORES
+	
 	public Tipocontrato() {
 	}
 
+	
+	
+	// GETTERS & SETTERS
+	
+	@Override
+	public String toString() {
+		return  id + " " + descripcion;
+	}
+	
+	
 	public int getId() {
 		return this.id;
 	}

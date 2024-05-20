@@ -32,9 +32,21 @@ public class Usuario extends Entidad implements Serializable {
 	@OneToMany(mappedBy="usuario")
 	private List<Contrato> contratos;
 
+	
+	// CONSTRUCTORES
+	
 	public Usuario() {
 	}
-
+	
+	
+	
+	// GETTERS & SETTERS
+	
+	@Override
+	public String toString() {
+		return  id + " " + nombreUsuario + " " +  email;
+	}
+	
 	public int getId() {
 		return this.id;
 	}

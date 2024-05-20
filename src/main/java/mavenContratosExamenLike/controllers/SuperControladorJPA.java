@@ -13,7 +13,7 @@ import mavenContratosExamenLike.entities.Entidad;
 
 public class SuperControladorJPA {
 	
-	private String unidadDePersistencia = "papeleria";
+	private String unidadDePersistencia = "mavenContratosExamenLike";
 	
 	private EntityManager em = null;
 	private String nombreTabla ="";
@@ -37,7 +37,7 @@ public class SuperControladorJPA {
 	//Singleton para que solo haya un EntityManager en el programa
 	protected EntityManager getEntityManager () {
 		if(em == null) {
-			em =  Persistence.createEntityManagerFactory(unidadDePersistencia).createEntityManager();
+			em =  Persistence.createEntityManagerFactory(this.unidadDePersistencia).createEntityManager();
 		}
 		return em;
 	}
